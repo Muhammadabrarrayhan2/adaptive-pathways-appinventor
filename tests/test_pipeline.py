@@ -143,3 +143,18 @@ def test_recommender_end_to_end(tmp_path):
     for r in recs:
         assert r["rationale"] and set(r["introduces"]) <= set(res["signals"]["gaps"])
 
+
+
+@pytest.mark.skipif(not (Path(__file__).resolve().parents[1] / "data/catalog/resources.json").exists(),
+                    reason="needs a pipeline run")
+def test_recommender_pseudonymised_peers_hide_identity(tmp_path):
+    from adaptive_pathways.common import load_config
+    from adaptive_pathways.recommend import Recommender, profile_file
+
+    p = make_aia(tmp_path, {"Screen1": ([("Button1", "Button"), ("Label1", "Label")], LEGACY)})
+    res = Recommender(load_config(), pseudonymize=lambda pid: "P-" + pid[:4]).recommend(profile_file(p))
+    for r in res["recommendations"]:
+        peer = r["peer_example"]
+        if peer:
+            assert peer["pseudonym"].startswith("P-") and "title" not in peer and "public_url" not in peer
+            assert "github.com" not in r["rationale"] and "galleryid" not in r["rationale"]

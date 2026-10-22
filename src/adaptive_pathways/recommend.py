@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import numpy as np
 import pandas as pd
@@ -52,7 +52,10 @@ SIZE_COLS = ["n_blocks", "n_components", "n_screens", "n_event_handlers", "n_pro
 
 
 class Recommender:
-    def __init__(self, cfg: dict[str, Any]):
+    def __init__(self, cfg: dict[str, Any], pseudonymize: Callable[[str], str] | None = None):
+        """`pseudonymize` maps a project id to a display pseudonym. When given, peer examples carry only the
+        pseudonym and structural facts (no title or URL, which can identify the author)."""
+        self.pseudonymize = pseudonymize
         self.resources = json.loads((cfg["paths"]["catalog"] / "resources.json").read_text(encoding="utf-8"))
         prof = pd.read_csv(cfg["paths"]["processed"] / "profiles.csv")
         self.corpus = prof[prof["in_analysis"] == True].copy()  # noqa: E712
@@ -73,6 +76,10 @@ class Recommender:
         me = np.log1p(np.array([p[c] for c in SIZE_COLS], dtype=float))
         dist = np.linalg.norm(np.log1p(cand[SIZE_COLS].to_numpy(dtype=float)) - me, axis=1)
         best = cand.iloc[int(np.argmin(dist))]
+        if self.pseudonymize:
+            return {"project_id": best["project_id"], "pseudonym": self.pseudonymize(best["project_id"]),
+                    "source": best["source"], "license": best.get("license"), "stage": int(best["stage_id"]),
+                    "n_blocks": int(best["n_blocks"])}
         return {"project_id": best["project_id"], "title": best["title"], "source": best["source"],
                 "public_url": best["public_url"], "stage": int(best["stage_id"])}
 
@@ -135,7 +142,10 @@ class Recommender:
                 f"{builds_on} and introduces {lbl(new)}.")
         if n_similar >= 5:
             text += f" Among {n_similar} reference projects of similar size, {lift:.0%} already use {CONCEPTS[lift_flag]}."
-        if peer:
+        if peer and "pseudonym" in peer:
+            text += (f" A comparable project at stage {peer['stage']}: {peer['pseudonym']} "
+                     f"({peer['n_blocks']} blocks, from {peer['source']}).")
+        elif peer:
             text += f" A peer example: '{peer['title']}' ({peer['public_url']})."
         return {"resource_id": r["resource_id"], "title": r["title"], "url": r["url"], "kind": r["kind"],
                 "difficulty": r["difficulty"], "introduces": new, "target_stage": r["target_stage"],
