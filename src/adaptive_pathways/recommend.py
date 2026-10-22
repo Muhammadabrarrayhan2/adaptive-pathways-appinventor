@@ -50,6 +50,17 @@ DIFF_FIT = {1: {"beginner": 1.0, "intermediate": 0.3, "advanced": 0.0},
             5: {"beginner": 0.4, "intermediate": 0.8, "advanced": 1.0}}
 SOURCE_NAMES = {"github": "GitHub", "gallery": "the App Inventor Gallery", "official": "an official tutorial",
                 "classroom": "a consented classroom project"}
+# Ranking weights. Each component is in [0, 1]; the score is their weighted sum. Exposed so the rationale for a
+# ranking can be shown and audited (proposal §1.2).
+SCORE_WEIGHTS = {
+    "stage_fit": 2.0,        # resource leads to the next stage (1.0), the same stage (0.6), two stages on (0.5)
+    "friction": 1.0,         # few new concepts at once: 1 -> 1.0, 2 -> 0.7, 3 -> 0.4, more -> 0.2
+    "peer_adoption": 1.5,    # share of size-matched corpus projects that already use the new concept
+    "foundational": 0.8,     # earlier concepts in the pedagogical order score higher
+    "familiarity": 0.6,      # resource reuses components the project already has (0, 0.5 or 1.0)
+    "difficulty_fit": 0.7,   # resource difficulty suits the project's stage
+    "evidence": 0.3,         # concepts measured from the resource's own solution project
+}
 SIZE_COLS = ["n_blocks", "n_components", "n_screens", "n_event_handlers", "n_procedures", "n_list_blocks"]
 
 
@@ -102,23 +113,31 @@ class Recommender:
             lift_flag = max(new, key=peer_rate.get)  # the new concept most common among size-matched peers
             lift = peer_rate[lift_flag]
             familiar = sorted(set(r["components"]) & set(p["_component_types"]))
-            foundational = 1.0 - ORDER[new[0]] / len(ORDER)
-            score = (2.0 * stage_fit + 1.0 * friction + 1.5 * lift + 0.8 * foundational
-                     + 0.3 * min(len(familiar), 2) + 0.7 * DIFF_FIT[stage].get(r["difficulty"], 0.5)
-                     + 0.3 * (r["evidence"] == "solution_aia"))
-            scored.append((score, r, new, familiar, lift, lift_flag))
+            parts = {
+                "stage_fit": stage_fit,
+                "friction": friction,
+                "peer_adoption": lift,
+                "foundational": 1.0 - ORDER[new[0]] / len(ORDER),
+                "familiarity": min(len(familiar), 2) / 2,
+                "difficulty_fit": DIFF_FIT[stage].get(r["difficulty"], 0.5),
+                "evidence": float(r["evidence"] == "solution_aia"),
+            }
+            score = sum(SCORE_WEIGHTS[k] * v for k, v in parts.items())
+            scored.append((score, r, new, familiar, lift, lift_flag, parts))
         scored.sort(key=lambda t: -t[0])
 
         picks, seen_primary, peers_used = [], set(), set()
-        for score, r, new, familiar, lift, lift_flag in scored:
+        for score, r, new, familiar, lift, lift_flag, parts in scored:
             if new[0] in seen_primary:
                 continue  # diversity: each suggestion opens a different first new concept
             seen_primary.add(new[0])
             peer = self._peer(p, min(stage + 1, 5), new[0], peers_used)
             if peer:
                 peers_used.add(peer["project_id"])
-            picks.append(self._explain(p, stage, used, gaps, r, new, familiar, lift, lift_flag, score, peer,
-                                       len(similar)))
+            pick = self._explain(p, stage, used, gaps, r, new, familiar, lift, lift_flag, score, peer, len(similar))
+            pick["score_parts"] = {k: {"value": round(float(v), 3), "weight": SCORE_WEIGHTS[k],
+                                       "points": round(float(SCORE_WEIGHTS[k] * v), 3)} for k, v in parts.items()}
+            picks.append(pick)
             if len(picks) == k:
                 break
         return {"stage": {"id": stage, "name": STAGE_BY_ID[stage]["name"], "rule": STAGE_BY_ID[stage]["rule"]},

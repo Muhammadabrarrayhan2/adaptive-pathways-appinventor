@@ -158,3 +158,16 @@ def test_recommender_pseudonymised_peers_hide_identity(tmp_path):
         if peer:
             assert peer["pseudonym"].startswith("P-") and "title" not in peer and "public_url" not in peer
             assert "github.com" not in r["rationale"] and "galleryid" not in r["rationale"]
+
+
+@pytest.mark.skipif(not (Path(__file__).resolve().parents[1] / "data/catalog/resources.json").exists(),
+                    reason="needs a pipeline run")
+def test_score_parts_explain_the_score(tmp_path):
+    from adaptive_pathways.common import load_config
+    from adaptive_pathways.recommend import SCORE_WEIGHTS, recommend_file
+
+    p = make_aia(tmp_path, {"Screen1": ([("Button1", "Button"), ("Label1", "Label")], LEGACY)})
+    for r in recommend_file(load_config(), p)["recommendations"]:
+        assert set(r["score_parts"]) == set(SCORE_WEIGHTS)
+        assert abs(sum(v["points"] for v in r["score_parts"].values()) - r["score"]) < 0.01
+        assert all(0.0 <= v["value"] <= 1.0 for v in r["score_parts"].values())
