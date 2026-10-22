@@ -1,5 +1,7 @@
 # Adaptive Pathways for App Inventor — data pipeline
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23560460.svg)](https://doi.org/10.5281/zenodo.23560460)
+
 **Author:** Muhammad Abrar Rayhan ([@Muhammadabrarrayhan2](https://github.com/Muhammadabrarrayhan2))
 
 Reproducible data pipeline for the pilot *"Adaptive Pathways for App Inventor: An Explainable Skill-Gap and
@@ -72,7 +74,7 @@ If you use the code, the derived data or the report, please cite it (GitHub's "C
 `CITATION.cff`):
 
 > Rayhan, M. A. (2026). *Adaptive Pathways for App Inventor: data pipeline* (Version 0.1.1) [Computer software].
-> https://github.com/Muhammadabrarrayhan2/adaptive-pathways-appinventor
+> Zenodo. https://doi.org/10.5281/zenodo.23560460
 
 Under the MIT License, copies and substantial portions of this code must keep the copyright notice in `LICENSE`
 and in each source file.
