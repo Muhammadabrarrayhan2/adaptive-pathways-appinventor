@@ -1,0 +1,205 @@
+{
+  "chosen_k": 3,
+  "primary_method": "kproto",
+  "fallback_used": false,
+  "chosen": {
+    "method": "kproto",
+    "k": 3,
+    "silhouette": 0.1326727489581525,
+    "stability": 0.9894804583357798,
+    "min_size": 81
+  },
+  "rule": "max silhouette over (method, k) with stability ARI >= 0.6 and min cluster size >= 3",
+  "n_projects": 396,
+  "features": {
+    "numeric_log1p": [
+      "n_blocks",
+      "n_components",
+      "n_screens",
+      "n_distinct_component_types",
+      "n_distinct_block_types",
+      "max_block_depth",
+      "max_statement_nesting",
+      "n_event_handlers",
+      "n_conditionals",
+      "n_loops",
+      "n_procedures",
+      "n_list_blocks"
+    ],
+    "binary": [
+      "uses_events",
+      "uses_conditionals",
+      "uses_loops",
+      "uses_procedures",
+      "uses_proc_params",
+      "uses_variables",
+      "uses_lists",
+      "uses_multiscreen",
+      "uses_sensors",
+      "uses_timer",
+      "uses_storage",
+      "uses_cloud_web",
+      "uses_media",
+      "uses_speech",
+      "uses_animation",
+      "uses_maps",
+      "uses_data_science",
+      "uses_ai"
+    ]
+  },
+  "candidates": [
+    {
+      "k": 3,
+      "silhouette_hier": 0.09479351500512243,
+      "silhouette_kproto": 0.1326727489581525,
+      "kproto_seed_stability_ari": 0.9894804583357798,
+      "hier_bootstrap_stability_ari": 0.45734341977826,
+      "hier_vs_kproto_ari": 0.3577430474588788,
+      "min_cluster_size_hier": 100,
+      "min_cluster_size_kproto": 81
+    },
+    {
+      "k": 4,
+      "silhouette_hier": 0.10650213309659799,
+      "silhouette_kproto": 0.13249142893026583,
+      "kproto_seed_stability_ari": 0.6901613763380195,
+      "hier_bootstrap_stability_ari": 0.3697643467768676,
+      "hier_vs_kproto_ari": 0.40239747851041363,
+      "min_cluster_size_hier": 59,
+      "min_cluster_size_kproto": 40
+    },
+    {
+      "k": 5,
+      "silhouette_hier": 0.10223634605844868,
+      "silhouette_kproto": 0.1141807315281364,
+      "kproto_seed_stability_ari": 0.9141469601065084,
+      "hier_bootstrap_stability_ari": 0.5283033276328574,
+      "hier_vs_kproto_ari": 0.3615255469359383,
+      "min_cluster_size_hier": 13,
+      "min_cluster_size_kproto": 24
+    },
+    {
+      "k": 6,
+      "silhouette_hier": 0.10809311078164181,
+      "silhouette_kproto": 0.10300790725920933,
+      "kproto_seed_stability_ari": 0.6473695261082618,
+      "hier_bootstrap_stability_ari": 0.4876178245241348,
+      "hier_vs_kproto_ari": 0.33889602482770387,
+      "min_cluster_size_hier": 3,
+      "min_cluster_size_kproto": 25
+    },
+    {
+      "k": 7,
+      "silhouette_hier": 0.11915999742514048,
+      "silhouette_kproto": 0.10039286984328516,
+      "kproto_seed_stability_ari": 0.5691825099436202,
+      "hier_bootstrap_stability_ari": 0.4965003932586079,
+      "hier_vs_kproto_ari": 0.32514987636766146,
+      "min_cluster_size_hier": 3,
+      "min_cluster_size_kproto": 11
+    },
+    {
+      "k": 8,
+      "silhouette_hier": 0.127488969932065,
+      "silhouette_kproto": 0.07209020320015976,
+      "kproto_seed_stability_ari": 0.5719088801758736,
+      "hier_bootstrap_stability_ari": 0.564901592699643,
+      "hier_vs_kproto_ari": 0.26768047081900354,
+      "min_cluster_size_hier": 3,
+      "min_cluster_size_kproto": 18
+    },
+    {
+      "k": 9,
+      "silhouette_hier": 0.12897134385806402,
+      "silhouette_kproto": 0.10386152765574556,
+      "kproto_seed_stability_ari": 0.5580828836460234,
+      "hier_bootstrap_stability_ari": 0.5568609867110326,
+      "hier_vs_kproto_ari": 0.2776212820091094,
+      "min_cluster_size_hier": 3,
+      "min_cluster_size_kproto": 11
+    }
+  ],
+  "exemplars": {
+    "0": [
+      {
+        "project_id": "987528eadb3ecccb",
+        "source": "github",
+        "title": "Webview2File"
+      },
+      {
+        "project_id": "b0a35bbe8169c312",
+        "source": "github",
+        "title": "PollinationsDemo"
+      },
+      {
+        "project_id": "5ad0a66a840a62da",
+        "source": "github",
+        "title": "PollinationsSample"
+      },
+      {
+        "project_id": "04a99c163028ddbe",
+        "source": "github",
+        "title": "SmartHomeApp"
+      },
+      {
+        "project_id": "27d1caff887f7e7f",
+        "source": "official",
+        "title": "PicCall"
+      }
+    ],
+    "1": [
+      {
+        "project_id": "b78ab17c4f9eca51",
+        "source": "github",
+        "title": "BIM0"
+      },
+      {
+        "project_id": "cb61713dd792eb93",
+        "source": "github",
+        "title": "CSAB_Budgeting_App"
+      },
+      {
+        "project_id": "54d71579239ec8a1",
+        "source": "github",
+        "title": "Quiz"
+      },
+      {
+        "project_id": "8fa5042b83145584",
+        "source": "github",
+        "title": "Project2D"
+      },
+      {
+        "project_id": "db573f8228a3579f",
+        "source": "github",
+        "title": "nCOVID19_Aion"
+      }
+    ],
+    "2": [
+      {
+        "project_id": "1aa0734fecf65b88",
+        "source": "github",
+        "title": "EnhancedDB"
+      },
+      {
+        "project_id": "4f9d42d9d72c73b5",
+        "source": "github",
+        "title": "ESP32_BLE_DEMO"
+      },
+      {
+        "project_id": "6d6b5a2fa0d94ed9",
+        "source": "github",
+        "title": "DiscordInventor"
+      },
+      {
+        "project_id": "174ef44416acf874",
+        "source": "github",
+        "title": "ThetaFlicks"
+      },
+      {
+        "project_id": "4e4a792d20b944c0",
+        "source": "github",
+        "title": "Demo1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1234 @@
+[
+  {
+    "resource_id": "R9141aef1",
+    "title": "CloudDB Chat App",
+    "url": "https://appinventor.mit.edu/explore/ai2/clouddb-chat",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [
+      "CloudDB",
+      "ListView"
+    ],
+    "introduces": [
+      "uses_cloud_web",
+      "uses_lists"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 3,
+    "target_stage_name": "Data-aware app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R584bae74",
+    "title": "Colored Dots",
+    "url": "https://appinventor.mit.edu/explore/ai2/colored-dots",
+    "kind": "tutorial",
+    "difficulty": "advanced",
+    "components": [
+      "Canvas"
+    ],
+    "introduces": [
+      "uses_animation"
+    ],
+    "requires": [
+      "uses_events",
+      "uses_conditionals",
+      "uses_variables"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R9f1b5861",
+    "title": "Emergency App Tutorial",
+    "url": "https://appinventor.mit.edu/explore/ai2/emergencyapp",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [
+      "Player",
+      "Map",
+      "LocationSensor",
+      "SpeechRecognizer",
+      "Camera",
+      "Sharing"
+    ],
+    "introduces": [
+      "uses_maps",
+      "uses_media",
+      "uses_sensors",
+      "uses_speech"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 4,
+    "target_stage_name": "Sensor-aware app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "Rd29c2614",
+    "title": "Exploring with the Location Sensor",
+    "url": "https://appinventor.mit.edu/explore/ai2/location-sensor",
+    "kind": "tutorial",
+    "difficulty": "advanced",
+    "components": [
+      "LocationSensor"
+    ],
+    "introduces": [
+      "uses_conditionals",
+      "uses_maps",
+      "uses_procedures",
+      "uses_sensors",
+      "uses_timer",
+      "uses_variables"
+    ],
+    "requires": [
+      "uses_events",
+      "uses_conditionals",
+      "uses_variables"
+    ],
+    "target_stage": 4,
+    "target_stage_name": "Sensor-aware app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "af31548afc700d63",
+      "033ad78c9bf0677c"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "Rd66364b2",
+    "title": "Fake Voices Tutorial",
+    "url": "https://appinventor.mit.edu/explore/ai2/fake_voices",
+    "kind": "tutorial",
+    "difficulty": "beginner",
+    "components": [
+      "TextToSpeech",
+      "SpeechRecognizer"
+    ],
+    "introduces": [
+      "uses_speech"
+    ],
+    "requires": [],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R51ed0dca",
+    "title": "Get the Gold",
+    "url": "https://appinventor.mit.edu/explore/ai2/get-gold",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [
+      "ImageSprite"
+    ],
+    "introduces": [
+      "uses_animation",
+      "uses_conditionals",
+      "uses_timer"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "297790c2abfa7c01"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R268ba02a",
+    "title": "Hello Codi!",
+    "url": "https://appinventor.mit.edu/explore/ai2/hello-codi",
+    "kind": "tutorial",
+    "difficulty": "beginner",
+    "components": [],
+    "introduces": [],
+    "requires": [],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "Rc45ad8ac",
+    "title": "Hello Purr",
+    "url": "https://appinventor.mit.edu/explore/ai2/hellopurr",
+    "kind": "tutorial",
+    "difficulty": "beginner",
+    "components": [
+      "Button",
+      "Sound"
+    ],
+    "introduces": [
+      "uses_media"
+    ],
+    "requires": [],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R01680267",
+    "title": "Magic 8 Ball",
+    "url": "https://appinventor.mit.edu/explore/ai2/magic-8-ball",
+    "kind": "tutorial",
+    "difficulty": "beginner",
+    "components": [],
+    "introduces": [],
+    "requires": [],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "Rb73aefd2",
+    "title": "Map It: Displaying Locations on a Google Map",
+    "url": "https://appinventor.mit.edu/explore/displaying-maps",
+    "kind": "tutorial",
+    "difficulty": "advanced",
+    "components": [
+      "ListPicker"
+    ],
+    "introduces": [
+      "uses_conditionals",
+      "uses_lists",
+      "uses_maps",
+      "uses_procedures",
+      "uses_sensors",
+      "uses_storage",
+      "uses_variables"
+    ],
+    "requires": [
+      "uses_events",
+      "uses_conditionals",
+      "uses_variables"
+    ],
+    "target_stage": 4,
+    "target_stage_name": "Sensor-aware app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "122a10b67f4199ef"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "Rfb96464b",
+    "title": "Mini Golf: Fling, TouchUp, TouchDown Gestures",
+    "url": "https://appinventor.mit.edu/explore/ai2/minigolf",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [
+      "ImageSprite"
+    ],
+    "introduces": [
+      "uses_animation",
+      "uses_conditionals",
+      "uses_procedures",
+      "uses_timer",
+      "uses_variables"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "53c6bdb2eb9b1124"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R8ca4f627",
+    "title": "Mole Mash",
+    "url": "https://appinventor.mit.edu/explore/ai2/molemash",
+    "kind": "tutorial",
+    "difficulty": "beginner",
+    "components": [
+      "ImageSprite"
+    ],
+    "introduces": [
+      "uses_animation",
+      "uses_media",
+      "uses_procedures",
+      "uses_timer",
+      "uses_variables"
+    ],
+    "requires": [],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "ff03acb47e8a88e5"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R2fc2fd77",
+    "title": "Mole Mash V2 with Sprite Layering",
+    "url": "https://appinventor.mit.edu/explore/ai2/molemash-2",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [
+      "ImageSprite"
+    ],
+    "introduces": [
+      "uses_animation",
+      "uses_generic",
+      "uses_lists",
+      "uses_loops",
+      "uses_media",
+      "uses_procedures",
+      "uses_timer",
+      "uses_variables"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 3,
+    "target_stage_name": "Data-aware app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "2fd8335f8d76c4ca"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "Rd026a102",
+    "title": "No Texting While Driving",
+    "url": "https://appinventor.mit.edu/explore/no-text-while-driving-ai2",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [
+      "Texting",
+      "TextToSpeech"
+    ],
+    "introduces": [
+      "uses_speech"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "Ra9b0f7f7",
+    "title": "Paint Pot Extended with Camera",
+    "url": "https://appinventor.mit.edu/explore/paint-pot-extended-camera",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [
+      "Canvas"
+    ],
+    "introduces": [
+      "uses_animation"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R2d77c254",
+    "title": "PaintPot (Part 1)",
+    "url": "https://appinventor.mit.edu/explore/ai2/paintpot-part1",
+    "kind": "tutorial",
+    "difficulty": "beginner",
+    "components": [
+      "Canvas"
+    ],
+    "introduces": [
+      "uses_animation"
+    ],
+    "requires": [],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "047f45301ea615d3"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "Rcec7e455",
+    "title": "PaintPot (Part 2)",
+    "url": "https://appinventor.mit.edu/explore/ai2/paintpot-part2",
+    "kind": "tutorial",
+    "difficulty": "beginner",
+    "components": [
+      "Canvas"
+    ],
+    "introduces": [
+      "uses_animation",
+      "uses_variables"
+    ],
+    "requires": [],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "b78330abfb2c7e8f"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R025868e0",
+    "title": "Password Purr Tutorial",
+    "url": "https://appinventor.mit.edu/explore/ai2/passwordpurr",
+    "kind": "tutorial",
+    "difficulty": "beginner",
+    "components": [
+      "PasswordTextBox"
+    ],
+    "introduces": [],
+    "requires": [],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R53726ea7",
+    "title": "Photo Booth App",
+    "url": "https://appinventor.mit.edu/explore/ai2/photo-booth-app",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [
+      "Camera"
+    ],
+    "introduces": [
+      "uses_media"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "Rd738cf69",
+    "title": "PicCall",
+    "url": "https://appinventor.mit.edu/explore/ai2/piccall",
+    "kind": "tutorial",
+    "difficulty": "beginner",
+    "components": [],
+    "introduces": [],
+    "requires": [],
+    "target_stage": 1,
+    "target_stage_name": "UI-only first app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "27d1caff887f7e7f"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R22e26891",
+    "title": "QuizMe",
+    "url": "https://appinventor.mit.edu/explore/ai2/quizme",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_conditionals",
+      "uses_lists",
+      "uses_variables"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 3,
+    "target_stage_name": "Data-aware app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "cdfaa3d585278545"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R214ffcf0",
+    "title": "Sharing Component: send files and text with the app of your choice",
+    "url": "https://appinventor.mit.edu/explore/ai2/file-sharing",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [
+      "Sharing"
+    ],
+    "introduces": [],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R8b74dd49",
+    "title": "Snow Globe Tutorial",
+    "url": "https://appinventor.mit.edu/explore/ai2/snowglobe",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_generic"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R7d281b85",
+    "title": "Space Invaders",
+    "url": "https://appinventor.mit.edu/explore/ai2/space-invaders",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [
+      "ImageSprite"
+    ],
+    "introduces": [
+      "uses_animation"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R79effb39",
+    "title": "State Geography Quiz with Map Component",
+    "url": "https://appinventor.mit.edu/explore/ai2/state-geography-quiz",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [
+      "Map"
+    ],
+    "introduces": [
+      "uses_conditionals",
+      "uses_data_science",
+      "uses_generic",
+      "uses_lists",
+      "uses_loops",
+      "uses_maps",
+      "uses_proc_params",
+      "uses_procedures",
+      "uses_variables"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 4,
+    "target_stage_name": "Sensor-aware app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "2d57ed13443fc007"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "Rd76e9f4c",
+    "title": "VideoWall",
+    "url": "https://appinventor.mit.edu/explore/ai2/videowall",
+    "kind": "tutorial",
+    "difficulty": "intermediate",
+    "components": [
+      "VideoPlayer"
+    ],
+    "introduces": [
+      "uses_conditionals",
+      "uses_media",
+      "uses_proc_params",
+      "uses_procedures",
+      "uses_variables"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "5b99c188b6c6fca2"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R0cc51468",
+    "title": "WebView Javascript Processor",
+    "url": "https://appinventor.mit.edu/explore/ai2/webview-javascript",
+    "kind": "tutorial",
+    "difficulty": "advanced",
+    "components": [
+      "WebViewer"
+    ],
+    "introduces": [],
+    "requires": [
+      "uses_events",
+      "uses_conditionals",
+      "uses_variables"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R981825e4",
+    "title": "Where’s My Car?",
+    "url": "https://appinventor.mit.edu/explore/ai2/wheres-my-car",
+    "kind": "tutorial",
+    "difficulty": "advanced",
+    "components": [
+      "ActivityStarter"
+    ],
+    "introduces": [
+      "uses_conditionals",
+      "uses_sensors",
+      "uses_storage",
+      "uses_variables"
+    ],
+    "requires": [
+      "uses_events",
+      "uses_conditionals",
+      "uses_variables"
+    ],
+    "target_stage": 4,
+    "target_stage_name": "Sensor-aware app",
+    "evidence": "solution_aia",
+    "solution_project_ids": [
+      "290ad1823211af0e"
+    ],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R3b514301",
+    "title": "Fake Voices: The Ethics of Deepfakes",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/fake_voices_unit",
+    "kind": "ai_curriculum",
+    "difficulty": "beginner",
+    "components": [],
+    "introduces": [
+      "uses_ai",
+      "uses_speech"
+    ],
+    "requires": [],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "Rf9831ae2",
+    "title": "Introduction to Machine Learning: Image Classification",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/image-classification-look-extension",
+    "kind": "ai_curriculum",
+    "difficulty": "beginner",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "Rd0324a9f",
+    "title": "Personal Image Classifier: PICaboo",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/picaboo",
+    "kind": "ai_curriculum",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "Rec137335",
+    "title": "Voice Calculator Tutorial",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/voice-calculator",
+    "kind": "ai_curriculum",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_ai",
+      "uses_speech"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R81951941",
+    "title": "Therapist Bot Tutorial",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/therapist-bot",
+    "kind": "ai_curriculum",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R97eeff64",
+    "title": "Awesome Dancing with AI Tutorial",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/aiDance",
+    "kind": "ai_curriculum",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "Rbf5d0591",
+    "title": "Facemesh Filter Camera",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/facemesh",
+    "kind": "ai_curriculum",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R63ff534a",
+    "title": "Simple ChatGPT App",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/simpleChatGPT",
+    "kind": "ai_curriculum",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R76d6ced5",
+    "title": "Simple ImageBot App",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/simpleImageBot",
+    "kind": "ai_curriculum",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R68fa66d8",
+    "title": "GenAI Digital Doodle App",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/GenAIDigitalDoodle",
+    "kind": "ai_curriculum",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R7c2ed4a7",
+    "title": "Hour of Code: StoryGPT",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/storyGPT",
+    "kind": "ai_curriculum",
+    "difficulty": "beginner",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "3-5",
+      "6-8"
+    ]
+  },
+  {
+    "resource_id": "R18786c6b",
+    "title": "GenAI: Historical Character Advisor App",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/HistoricalCharacterAdvisor",
+    "kind": "ai_curriculum",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R245a3e8d",
+    "title": "GenAI Vision Aid",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/GenAIVisionAid",
+    "kind": "ai_curriculum",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R80ac5ba5",
+    "title": "ChatGPT App",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/chatGPT",
+    "kind": "ai_curriculum",
+    "difficulty": "advanced",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events",
+      "uses_conditionals",
+      "uses_variables"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "Rc39d1c29",
+    "title": "ImageBot App",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/imageBot",
+    "kind": "ai_curriculum",
+    "difficulty": "advanced",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events",
+      "uses_conditionals",
+      "uses_variables"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R98e32528",
+    "title": "Reinforcement Learning: Tame the Dog",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/rl-tamethedog",
+    "kind": "ai_curriculum",
+    "difficulty": "advanced",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events",
+      "uses_conditionals",
+      "uses_variables"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R7a60237f",
+    "title": "Rock Paper Scissors Tutorial",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/rock-paper-scissors",
+    "kind": "ai_curriculum",
+    "difficulty": "advanced",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events",
+      "uses_conditionals",
+      "uses_variables"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R2cb2cf89",
+    "title": "Alexa Hello World",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/alexa-hello-world",
+    "kind": "ai_curriculum",
+    "difficulty": "beginner",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-12"
+    ]
+  },
+  {
+    "resource_id": "R86e2164c",
+    "title": "Alexa Calculator",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/alexa-calculator",
+    "kind": "ai_curriculum",
+    "difficulty": "beginner",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-12"
+    ]
+  },
+  {
+    "resource_id": "Rb2789ddf",
+    "title": "Alexa Number Guessing Game",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/alexa-number-guessing-game",
+    "kind": "ai_curriculum",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "6-12"
+    ]
+  },
+  {
+    "resource_id": "R0c569fc2",
+    "title": "Alexa Messenger",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/alexa-messenger",
+    "kind": "ai_curriculum",
+    "difficulty": "advanced",
+    "components": [],
+    "introduces": [
+      "uses_ai"
+    ],
+    "requires": [
+      "uses_events",
+      "uses_conditionals",
+      "uses_variables"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R37ebefb3",
+    "title": "Augmented Reality: Chicken Bowling",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/ar-chickenbowling",
+    "kind": "ai_curriculum",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_ai",
+      "uses_data_science"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 5,
+    "target_stage_name": "AI-component app",
+    "evidence": "index_metadata",
+    "solution_project_ids": [],
+    "grade_levels": [
+      "9-12"
+    ]
+  },
+  {
+    "resource_id": "R5e024b60",
+    "title": "Lists blocks reference",
+    "url": "https://appinventor.mit.edu/explore/ai2/support/blocks/lists",
+    "kind": "concept_reference",
+    "difficulty": "beginner",
+    "components": [],
+    "introduces": [
+      "uses_lists"
+    ],
+    "requires": [],
+    "target_stage": 3,
+    "target_stage_name": "Data-aware app",
+    "evidence": "curated",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R8cb5cad7",
+    "title": "Procedures blocks reference",
+    "url": "https://appinventor.mit.edu/explore/ai2/support/blocks/procedures",
+    "kind": "concept_reference",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_procedures",
+      "uses_proc_params"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "curated",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R08b37361",
+    "title": "Control blocks (loops & conditionals) reference",
+    "url": "https://appinventor.mit.edu/explore/ai2/support/blocks/control",
+    "kind": "concept_reference",
+    "difficulty": "beginner",
+    "components": [],
+    "introduces": [
+      "uses_loops",
+      "uses_conditionals"
+    ],
+    "requires": [],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "curated",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "Ra668d18f",
+    "title": "Dictionaries blocks reference",
+    "url": "https://ai2.appinventor.mit.edu/reference/blocks/dictionaries.html",
+    "kind": "concept_reference",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_dictionaries"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 3,
+    "target_stage_name": "Data-aware app",
+    "evidence": "curated",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R968d32f3",
+    "title": "Variables blocks reference",
+    "url": "https://appinventor.mit.edu/explore/ai2/support/blocks/variables",
+    "kind": "concept_reference",
+    "difficulty": "beginner",
+    "components": [],
+    "introduces": [
+      "uses_variables"
+    ],
+    "requires": [],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "curated",
+    "solution_project_ids": [],
+    "grade_levels": null
+  },
+  {
+    "resource_id": "R581e18d5",
+    "title": "Building apps with many screens",
+    "url": "https://ai2.appinventor.mit.edu/reference/other/manyscreens.html",
+    "kind": "concept_reference",
+    "difficulty": "intermediate",
+    "components": [],
+    "introduces": [
+      "uses_multiscreen"
+    ],
+    "requires": [
+      "uses_events"
+    ],
+    "target_stage": 2,
+    "target_stage_name": "Event-driven (multi-screen) app",
+    "evidence": "curated",
+    "solution_project_ids": [],
+    "grade_levels": null
+  }
+]

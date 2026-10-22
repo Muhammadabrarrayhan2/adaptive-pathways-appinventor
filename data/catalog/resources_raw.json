@@ -1,0 +1,617 @@
+[
+  {
+    "kind": "tutorial",
+    "title": "CloudDB Chat App",
+    "components": [
+      "CloudDB",
+      "ListView"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/ai2/clouddb-chat",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "Colored Dots",
+    "components": [
+      "Drawing Canvas"
+    ],
+    "difficulty": "advanced",
+    "url": "https://appinventor.mit.edu/explore/ai2/colored-dots",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "Emergency App Tutorial",
+    "components": [
+      "Player",
+      "Map",
+      "Location Sensor",
+      "Speech Recognizer",
+      "Camera",
+      "Sharing"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/ai2/emergencyapp",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "Exploring with the Location Sensor",
+    "components": [
+      "Location Sensor"
+    ],
+    "difficulty": "advanced",
+    "url": "https://appinventor.mit.edu/explore/ai2/location-sensor",
+    "aia_urls": [
+      "https://appinventor.mit.edu/assets/files/GPSAccuracyLogger.aia",
+      "https://appinventor.mit.edu/assets/files/LocationSensorTest.aia"
+    ]
+  },
+  {
+    "kind": "tutorial",
+    "title": "Fake Voices Tutorial",
+    "components": [
+      "Text-To-Speech",
+      "Speech Recognizer"
+    ],
+    "difficulty": "beginner",
+    "url": "https://appinventor.mit.edu/explore/ai2/fake_voices",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "Get the Gold",
+    "components": [
+      "Sprites"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/ai2/get-gold",
+    "aia_urls": [
+      "https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/GetTheGold/GetTheGold.aia"
+    ]
+  },
+  {
+    "kind": "tutorial",
+    "title": "Hello Codi!",
+    "components": [
+      "Unknown"
+    ],
+    "difficulty": "beginner",
+    "url": "https://appinventor.mit.edu/explore/ai2/hello-codi",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "Hello Purr",
+    "components": [
+      "Button",
+      "Sound"
+    ],
+    "difficulty": "beginner",
+    "url": "https://appinventor.mit.edu/explore/ai2/hellopurr",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "Magic 8 Ball",
+    "components": [
+      "Game"
+    ],
+    "difficulty": "beginner",
+    "url": "https://appinventor.mit.edu/explore/ai2/magic-8-ball",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "Map It: Displaying Locations on a Google Map",
+    "components": [
+      "ListPicker"
+    ],
+    "difficulty": "advanced",
+    "url": "https://appinventor.mit.edu/explore/displaying-maps",
+    "aia_urls": [
+      "https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/mapIt/MapIt_MIT.aia"
+    ]
+  },
+  {
+    "kind": "tutorial",
+    "title": "Mini Golf: Fling, TouchUp, TouchDown Gestures",
+    "components": [
+      "Sprites"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/ai2/minigolf",
+    "aia_urls": [
+      "https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/miniGolf/MiniGolf_MIT.aia"
+    ]
+  },
+  {
+    "kind": "tutorial",
+    "title": "Mole Mash",
+    "components": [
+      "Sprites"
+    ],
+    "difficulty": "beginner",
+    "url": "https://appinventor.mit.edu/explore/ai2/molemash",
+    "aia_urls": [
+      "https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/moleMash/MoleMash.aia"
+    ]
+  },
+  {
+    "kind": "tutorial",
+    "title": "Mole Mash V2 with Sprite Layering",
+    "components": [
+      "ImageSprites"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/ai2/molemash-2",
+    "aia_urls": [
+      "https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/moleMash2/MoleMash2_MIT.aia"
+    ]
+  },
+  {
+    "kind": "tutorial",
+    "title": "No Texting While Driving",
+    "components": [
+      "Texting",
+      "TextToSpeech"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/no-text-while-driving-ai2",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "Paint Pot Extended with Camera",
+    "components": [
+      "Drawing Canvas"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/paint-pot-extended-camera",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "PaintPot (Part 1)",
+    "components": [
+      "Drawing Canvas"
+    ],
+    "difficulty": "beginner",
+    "url": "https://appinventor.mit.edu/explore/ai2/paintpot-part1",
+    "aia_urls": [
+      "https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/paintPot1/PaintPot.aia"
+    ]
+  },
+  {
+    "kind": "tutorial",
+    "title": "PaintPot (Part 2)",
+    "components": [
+      "Drawing Canvas"
+    ],
+    "difficulty": "beginner",
+    "url": "https://appinventor.mit.edu/explore/ai2/paintpot-part2",
+    "aia_urls": [
+      "https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/paintPot2/PaintPot2.aia"
+    ]
+  },
+  {
+    "kind": "tutorial",
+    "title": "Password Purr Tutorial",
+    "components": [
+      "PasswordTextBox"
+    ],
+    "difficulty": "beginner",
+    "url": "https://appinventor.mit.edu/explore/ai2/passwordpurr",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "Photo Booth App",
+    "components": [
+      "Camera"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/ai2/photo-booth-app",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "PicCall",
+    "components": [
+      "Unknown"
+    ],
+    "difficulty": "beginner",
+    "url": "https://appinventor.mit.edu/explore/ai2/piccall",
+    "aia_urls": [
+      "https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/picCall/PicCall.aia"
+    ]
+  },
+  {
+    "kind": "tutorial",
+    "title": "QuizMe",
+    "components": [
+      "Unknown"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/ai2/quizme",
+    "aia_urls": [
+      "https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/QuizMe/QuizMe_MIT.aia"
+    ]
+  },
+  {
+    "kind": "tutorial",
+    "title": "Sharing Component: send files and text with the app of your choice",
+    "components": [
+      "File Sharing"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/ai2/file-sharing",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "Snow Globe Tutorial",
+    "components": [
+      "Any Component"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/ai2/snowglobe",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "Space Invaders",
+    "components": [
+      "Sprites"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/ai2/space-invaders",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "State Geography Quiz with Map Component",
+    "components": [
+      "Map"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/ai2/state-geography-quiz",
+    "aia_urls": [
+      "https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/stateQuiz/StateQuiz.aia"
+    ]
+  },
+  {
+    "kind": "tutorial",
+    "title": "VideoWall",
+    "components": [
+      "Video"
+    ],
+    "difficulty": "intermediate",
+    "url": "https://appinventor.mit.edu/explore/ai2/videowall",
+    "aia_urls": [
+      "https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/videoWall/VideoWall.aia"
+    ]
+  },
+  {
+    "kind": "tutorial",
+    "title": "WebView Javascript Processor",
+    "components": [
+      "WebViewer"
+    ],
+    "difficulty": "advanced",
+    "url": "https://appinventor.mit.edu/explore/ai2/webview-javascript",
+    "aia_urls": []
+  },
+  {
+    "kind": "tutorial",
+    "title": "Where’s My Car?",
+    "components": [
+      "Activity Starter"
+    ],
+    "difficulty": "advanced",
+    "url": "https://appinventor.mit.edu/explore/ai2/wheres-my-car",
+    "aia_urls": [
+      "https://appinventor.mit.edu/explore/sites/all/files/ai2tutorials/wheresMyCar/AndroidWheresMyCar_MIT.aia"
+    ]
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Fake Voices: The Ethics of Deepfakes",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/fake_voices_unit",
+    "difficulty": "beginner",
+    "resource_type": "curriculum unit",
+    "subject": "computer science",
+    "grade_levels": [
+      "9-12"
+    ],
+    "summary": "In this unit, students explore synthetic media by creating a smartphone app that can speak in different voices by changing the rate and pitch of the speech. Students work in groups to present arguments about the possible future impacts of various types of deepfake media, including ones in commerce and...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Introduction to Machine Learning: Image Classification",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/image-classification-look-extension",
+    "difficulty": "beginner",
+    "resource_type": "curriculum unit",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ],
+    "summary": "Students will learn about the basics of machine learning and create their own apps that implement these concepts through image classification. The students will take photos with their mobile devices and the apps will identify objects within those photos. Each classification comes with a confidence level, a value of how...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Personal Image Classifier: PICaboo",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/picaboo",
+    "difficulty": "intermediate",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ],
+    "summary": "How can a machine learn about the world? In some ways computers are like very young babies, always soaking up new examples and trying to put what they sense into different buckets — dog, cat, familiar face, stranger. In this two-part tutorial, you will learn about a type of artificial...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Voice Calculator Tutorial",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/voice-calculator",
+    "difficulty": "intermediate",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ],
+    "summary": "Have you ever wondered how conversational AI agents such as Alexa and Siri work? How do they interpret what you are saying to them and grasp your intent? How do they then know how to appropriately and meaningfully respond to you? In this project you are challenged to create your...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Therapist Bot Tutorial",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/therapist-bot",
+    "difficulty": "intermediate",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ],
+    "summary": "Can an app on your phone be your next therapist? Our friends at YR Media reported on apps that use artificial intelligence to power therapy bots in their news story Could Your Next Therapist Be Your Phone? This tutorial will show you how to make your own therapist bot app...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Awesome Dancing with AI Tutorial",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/aiDance",
+    "difficulty": "intermediate",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "9-12"
+    ],
+    "summary": "Our amazing friends at YR Media has published an intriguing interactive story on AI titled Can You Teach AI to Dance? which got us thinking. Is there an algorithm to describe, identify or measure an amazing dance? Can dance moves be quantified and measured? Can AI be used to help...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Facemesh Filter Camera",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/facemesh",
+    "difficulty": "intermediate",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ],
+    "summary": "Have you taken photos with facial filters? Instagram and Snapchat facial filters have taken the internet by storm, but do you know how these filters work? Would you like to make your own facial filters? Our friends at YR Media have this excellent interactive article about facial recognition. In this...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Simple ChatGPT App",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/simpleChatGPT",
+    "difficulty": "intermediate",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ],
+    "summary": "Have you ever wondered how it is possible to create your very own ChatGPT app that will allow you, wherever you are, to tap into a world of useful information? In this tutorial, you will build a simple app with MIT App Inventor that allows users to connect to ChatGPT,...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Simple ImageBot App",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/simpleImageBot",
+    "difficulty": "intermediate",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ],
+    "summary": "Have you ever wondered how to create your own generative AI app for wildly imaginative visualizations? In this tutorial, you will build a simple app with MIT App Inventor that allows users to connect to OpenAI’s DALL-E generative AI program, submit their own prompts, and see the result in exciting...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "GenAI Digital Doodle App",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/GenAIDigitalDoodle",
+    "difficulty": "intermediate",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ],
+    "summary": "The Digital Doodle App allows users to draw on their mobile device screens. With the addition of generative AI tools, users can ask an AI model to generate a background image for them to draw on.",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Hour of Code: StoryGPT",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/storyGPT",
+    "difficulty": "beginner",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "3-5",
+      "6-8"
+    ],
+    "summary": "Students will be building an app where they can write keywords and/or select emojis that represent elements of a story (e.g., 🐉 for dragon, 🚀 for space, ❤️ for romance). Students will then use a ChatBot (in this case Gemini) to generate a short story based on their choices.",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "GenAI: Historical Character Advisor App",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/HistoricalCharacterAdvisor",
+    "difficulty": "intermediate",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ],
+    "summary": "In 1985 Steve Jobs shared a vision for an AI tool that could capture the “underlying worldview” of a historical figure like Aristotle and answer students’ questions as that character. Amazingly, in just 40 years, generative AI tools such as ChatGPT and Gemini have done that. Imagine that you could...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "GenAI Vision Aid",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/GenAIVisionAid",
+    "difficulty": "intermediate",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ],
+    "summary": "The GenAI Vision Aid App is a computational action application accessibility tool that helps visually impaired users understand their surroundings. It allows users to take a photo with their device and then uses an AI model to generate a detailed, spoken and written description of the image’s contents. This enables...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "ChatGPT App",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/chatGPT",
+    "difficulty": "advanced",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ],
+    "summary": "Have you ever wondered how it is possible to create your very own ChatGPT app that will allow you, wherever you are, to tap into a world of useful information? In this tutorial, you will build an app with MIT App Inventor that allows users to connect to ChatGPT, ask...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "ImageBot App",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/imageBot",
+    "difficulty": "advanced",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-8",
+      "9-12"
+    ],
+    "summary": "Have you ever wondered how to create your own generative AI app for wildly imaginative visualizations? In this tutorial, you will build an app with MIT App Inventor that allows users to connect to OpenAI’s DALL-E generative AI program, submit their own prompts, and see the result in exciting artistic...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Reinforcement Learning: Tame the Dog",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/rl-tamethedog",
+    "difficulty": "advanced",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "9-12"
+    ],
+    "summary": "Learning is a mysterious phenomenon —the process through which humans and animals learn how to adopt certain behaviors in response to environmental stimuli. However, it is clear that introducing a feedback cycle into any learning process (rewards and penalties) can help solidify and speed it up. In this project, you...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Rock Paper Scissors Tutorial",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/rock-paper-scissors",
+    "difficulty": "advanced",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "9-12"
+    ],
+    "summary": "These days Artificial Intelligence and Machine Learning are all the craze, but have you ever wondered how in the world is it really possible to teach a machine to learn something, anything really, and become, well, artificially intelligent? In this project, using the context of one of the simplest children's...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Alexa Hello World",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/alexa-hello-world",
+    "difficulty": "beginner",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-12"
+    ],
+    "summary": "In this tutorial, you will learn how to use the MIT App Inventor’s Conversational AI Interface to create your own Amazon Alexa skill for Alexa to say “Hello World” when prompted by the user. Note:Support for Alexa projects is discontinued following the conclusion of our Amazon Future Engineers collaboration. Some...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Alexa Calculator",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/alexa-calculator",
+    "difficulty": "beginner",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-12"
+    ],
+    "summary": "In this tutorial, you will learn how to use the MIT App Inventor’s Conversational AI Interface to create your own multiplication calculator for Alexa to tell the user the answer when a basic multiplication question is asked. The Skill we will be making uses slots to keep track of what...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Alexa Number Guessing Game",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/alexa-number-guessing-game",
+    "difficulty": "intermediate",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "6-12"
+    ],
+    "summary": "In this tutorial, you will be using the App Inventor Alexa Skills interface to create an interactive number guessing game, where the player tries to guess a random number selected by Alexa. After each guess, Alexa will give you feedback on whether your guess is too big, too small, or...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Alexa Messenger",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/alexa-messenger",
+    "difficulty": "advanced",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "9-12"
+    ],
+    "summary": "Up to this point you have only seen App Inventor Alexa tutorials where App Inventor was only used to provide an easy block-based language environment to develop Alexa Skills. These may have given the wrong impression that Alexa does not really integrate with many of the native mobile app developing...",
+    "aia_urls": []
+  },
+  {
+    "kind": "ai_curriculum",
+    "title": "Augmented Reality: Chicken Bowling",
+    "url": "https://appinventor.mit.edu/explore/resources/ai/ar-chickenbowling",
+    "difficulty": "intermediate",
+    "resource_type": "tutorial",
+    "subject": "computer science",
+    "grade_levels": [
+      "9-12"
+    ],
+    "summary": "Augmented reality, or AR for short, is a human-computer interaction where 3D computer graphics are placed into the physical world around the user through a device. In this case, the user will utilize their phone. The AR Chicken Placement App is the first part of the AR Chicken Bowling App...",
+    "aia_urls": []
+  }
+]

@@ -1,0 +1,153 @@
+{
+  "families": {
+    "ui": [
+      "Button",
+      "CheckBox",
+      "CircularProgress",
+      "DatePicker",
+      "Image",
+      "Label",
+      "LinearProgress",
+      "ListPicker",
+      "ListView",
+      "Notifier",
+      "PasswordTextBox",
+      "Slider",
+      "Spinner",
+      "Switch",
+      "TextBox",
+      "TimePicker",
+      "WebViewer"
+    ],
+    "layout": [
+      "AbsoluteArrangement",
+      "HorizontalArrangement",
+      "HorizontalScrollArrangement",
+      "TableArrangement",
+      "VerticalArrangement",
+      "VerticalScrollArrangement"
+    ],
+    "media": [
+      "Camcorder",
+      "Camera",
+      "ImagePicker",
+      "MediaStore",
+      "Player",
+      "Sound",
+      "SoundRecorder",
+      "VideoPlayer"
+    ],
+    "speech_translate": [
+      "SpeechRecognizer",
+      "TextToSpeech",
+      "Translator",
+      "YandexTranslate"
+    ],
+    "animation": [
+      "Ball",
+      "Canvas",
+      "ImageSprite"
+    ],
+    "maps": [
+      "Circle",
+      "FeatureCollection",
+      "LineString",
+      "Map",
+      "Marker",
+      "Navigation",
+      "Polygon",
+      "Rectangle"
+    ],
+    "sensors": [
+      "AccelerometerSensor",
+      "BarcodeScanner",
+      "Barometer",
+      "GyroscopeSensor",
+      "Hygrometer",
+      "LightSensor",
+      "LocationSensor",
+      "MagneticFieldSensor",
+      "NearField",
+      "OrientationSensor",
+      "Pedometer",
+      "ProximitySensor",
+      "Thermometer"
+    ],
+    "timer": [
+      "Clock"
+    ],
+    "social": [
+      "ContactPicker",
+      "EmailPicker",
+      "PhoneCall",
+      "PhoneNumberPicker",
+      "Sharing",
+      "Texting",
+      "Twitter"
+    ],
+    "storage_local": [
+      "DataFile",
+      "File",
+      "TinyDB"
+    ],
+    "cloud_web": [
+      "CloudDB",
+      "FirebaseDB",
+      "FusiontablesControl",
+      "GameClient",
+      "Spreadsheet",
+      "TinyWebDB",
+      "Voting",
+      "Web"
+    ],
+    "connectivity": [
+      "ActivityStarter",
+      "BluetoothClient",
+      "BluetoothServer",
+      "Serial"
+    ],
+    "robotics": [
+      "Ev3ColorSensor",
+      "Ev3Commands",
+      "Ev3GyroSensor",
+      "Ev3Motors",
+      "Ev3Sound",
+      "Ev3TouchSensor",
+      "Ev3UI",
+      "Ev3UltrasonicSensor",
+      "NxtColorSensor",
+      "NxtDirectCommands",
+      "NxtDrive",
+      "NxtLightSensor",
+      "NxtSoundSensor",
+      "NxtTouchSensor",
+      "NxtUltrasonicSensor"
+    ],
+    "data_science": [
+      "AnomalyDetection",
+      "Chart",
+      "ChartData2D",
+      "DataFile",
+      "Regression",
+      "Spreadsheet",
+      "Trendline"
+    ],
+    "ai_builtin": [
+      "ChatBot",
+      "ImageBot"
+    ]
+  },
+  "ai_extension_pattern": "classifier|posenet|facemesh|handpose|teachable|tensorflow|tflite|objectdetect|chatbot|imagebot|gpt|openai|gemini|llm|machinelearning|lookextension|^look$|emotion|faceapi|mediapipe|\\bml",
+  "docs": {
+    "n_blocks": "Total blocks across all screens (aiatools, aggregated per screen).",
+    "n_components": "Designer components excluding the Screen (Form) itself.",
+    "max_block_depth": "Deepest chain of nested blocks (value + statement sockets), a proxy for expression complexity.",
+    "max_statement_nesting": "Deepest nesting of statement sockets (if-inside-loop-inside-event...).",
+    "n_procedures_with_params": "Procedures declaring at least one parameter (abstraction beyond copy-paste).",
+    "n_generic_blocks": "'Any component' blocks \u2014 an advanced abstraction over component instances.",
+    "n_ai_extension": "Components/extensions recognised as AI (image/audio classifiers, PoseNet, FaceMesh, LLM bots...).",
+    "uses_*": "Boolean: the project contains at least one of the corresponding blocks/components.",
+    "n_<family>": "Count of components in a palette family: ui, layout, media, speech_translate, animation, maps, sensors, timer, social, storage_local, cloud_web, connectivity, robotics, data_science, ai_builtin",
+    "in_analysis": "True if parsed OK, not empty and not a structural near-duplicate of a higher-priority project."
+  }
+}

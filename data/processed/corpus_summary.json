@@ -1,0 +1,82 @@
+{
+  "corpus_total": 400,
+  "in_analysis": 396,
+  "by_source_total": {
+    "github": 374,
+    "official": 14,
+    "gallery": 12
+  },
+  "by_source_in_analysis": {
+    "github": 371,
+    "official": 14,
+    "gallery": 11
+  },
+  "near_duplicates": 3,
+  "empty": 1,
+  "parse_errors": 0,
+  "rejected_downloads": {
+    "not_zip": 2,
+    "too_large": 1
+  },
+  "aiatools_success_rate": 0.985,
+  "aiatools_block_agreement": 0.9974619289340102,
+  "aiatools_component_agreement": 0.9923857868020305,
+  "legacy_format_projects": 6,
+  "licenses": {
+    "MIT": 253,
+    "GPL-3.0": 66,
+    "Apache-2.0": 21,
+    "CC0-1.0": 18,
+    "CC BY-SA 4.0 (MIT App Inventor)": 14,
+    "CC BY-SA 4.0 (App Inventor Gallery terms)": 12,
+    "Unlicense": 4,
+    "GPL-2.0": 4,
+    "BSD-2-Clause": 2,
+    "CC-BY-4.0": 1
+  },
+  "baseline_comparison": {
+    "mean_blocks": {
+      "this_corpus": 261.551,
+      "gresse_von_wangenheim": 162.5
+    },
+    "pct_under_15_blocks": {
+      "this_corpus": 0.144,
+      "gresse_von_wangenheim": 0.25
+    },
+    "pct_with_events": {
+      "this_corpus": 0.967,
+      "gresse_von_wangenheim": 0.9
+    },
+    "pct_with_loops": {
+      "this_corpus": 0.172,
+      "gresse_von_wangenheim": 0.06
+    },
+    "pct_with_button_or_label": {
+      "this_corpus": 0.96,
+      "gresse_von_wangenheim": 0.85
+    }
+  },
+  "stage_distribution": {
+    "Data-aware app": 158,
+    "Event-driven (multi-screen) app": 122,
+    "Sensor-aware app": 65,
+    "UI-only first app": 43,
+    "AI-component app": 8
+  },
+  "clustering": {
+    "chosen_k": 3,
+    "primary_method": "kproto",
+    "fallback_used": false,
+    "chosen": {
+      "method": "kproto",
+      "k": 3,
+      "silhouette": 0.1326727489581525,
+      "stability": 0.9894804583357798,
+      "min_size": 81
+    },
+    "rule": "max silhouette over (method, k) with stability ARI >= 0.6 and min cluster size >= 3",
+    "n_projects": 396
+  },
+  "ari_clusters_vs_rule_stages": 0.12500303986737013,
+  "catalog_resources": 56
+}

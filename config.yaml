@@ -1,0 +1,64 @@
+# Adaptive Pathways for App Inventor — data pipeline configuration.
+# Every stochastic step reads `seed` from here so runs are reproducible (proposal §3.1, D4).
+
+seed: 42
+user_agent: "AdaptivePathwaysResearch/0.1 (+research pilot; contact abrarrayhan8@gmail.com)"
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  catalog: data/catalog
+  reports: reports
+
+http:
+  timeout_s: 30
+  retries: 4
+  min_interval_s: 0.5        # politeness delay between requests to the same host
+
+limits:
+  max_aia_bytes: 25000000     # skip archives larger than 25 MB (asset-heavy, not code-heavy)
+  max_uncompressed_bytes: 200000000   # zip-bomb guard
+  target_corpus_size: 400     # proposal §3.1: 200–400 curated projects
+
+sources:
+  gallery:
+    enabled: true
+    base_url: https://gallery.appinventor.mit.edu
+    aia_url: https://storage.googleapis.com/mitai2gallery/gallery/apps/{gid}/aia
+    listings: ["/featured/", "/featured/time", "/featured/name"]
+    max_pages: 30
+  official:
+    enabled: true
+    base_url: https://appinventor.mit.edu
+    tutorial_index: /explore/ai2/tutorials
+    ai_index: /explore/ai-with-mit-app-inventor
+  github:
+    enabled: true
+    max_repos: 1400
+    # Only repositories whose licence explicitly permits reuse. "unspecified" (no licence = all rights reserved)
+    # and "NOASSERTION" (unrecognised licence file) are excluded.
+    allowed_licenses: [MIT, Apache-2.0, BSD-2-Clause, BSD-3-Clause, ISC, MPL-2.0, GPL-2.0, GPL-3.0, LGPL-2.1,
+                       LGPL-3.0, AGPL-3.0, EPL-2.0, CC0-1.0, CC-BY-4.0, CC-BY-SA-4.0, Unlicense, 0BSD, Zlib]
+    max_aia_per_repo: 8       # keep any single repo/course from dominating the corpus
+    queries:
+      - "topic:appinventor"
+      - "topic:mit-app-inventor"
+      - "topic:app-inventor"
+      - "topic:appinventor2"
+      - "aia app inventor"
+      - "appinventor in:name"
+      - "app inventor aia in:readme"
+      - "mit app inventor project in:readme"
+      - "app inventor image classifier"
+      - "app inventor personal image classifier"
+      - "app inventor tutorial in:name,description"
+      - "appinventor sensor"
+  classroom:
+    enabled: true             # reads consented, de-identified .aia files from data/raw/classroom_inbox/
+
+clustering:
+  k_range: [3, 9]
+  n_seeds: 10                 # stability check across seeds (proposal §3.2)
+  bootstrap_rounds: 20
+  bootstrap_frac: 0.8

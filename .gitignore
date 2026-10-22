@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+logs/
+# Raw archives are third-party works (CC BY-SA / per-repo licences) and classroom data is consented
+# for research only: keep them out of version control. The manifest records how to re-fetch them.
+data/raw/aia/
+data/raw/classroom_inbox/*.aia

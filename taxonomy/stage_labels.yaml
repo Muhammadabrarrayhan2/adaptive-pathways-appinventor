@@ -1,0 +1,34 @@
+taxonomy_version: v0-draft (rule-based, awaiting teacher review)
+stages:
+- id: 5
+  key: ai_component
+  name: AI-component app
+  rule: uses an AI component or AI extension (classifier, PoseNet, FaceMesh, ChatBot,
+    ImageBot...)
+- id: 4
+  key: sensor_aware
+  name: Sensor-aware app
+  rule: uses a hardware sensor or location/maps, with event logic reacting to it
+- id: 3
+  key: data_aware
+  name: Data-aware app
+  rule: 'stores or structures data: lists/dictionaries, TinyDB/File, CloudDB/Web,
+    or charts'
+- id: 2
+  key: event_driven
+  name: Event-driven (multi-screen) app
+  rule: has event handlers plus logic (conditionals/variables), multiple screens,
+    or 15+ blocks
+- id: 1
+  key: ui_first_app
+  name: UI-only first app
+  rule: designer components with few or no blocks and no logic beyond simple event
+    handlers
+rule_cluster_to_stage:
+  0: UI-only first app
+  1: Data-aware app
+  2: Data-aware app
+reviewer_cluster_to_stage: {}
+reviewer_notes: 'Teachers: set reviewer_cluster_to_stage {cluster: stage name} after
+  inspecting exemplars in data/processed/cluster_selection.json. Kept across pipeline
+  runs.'

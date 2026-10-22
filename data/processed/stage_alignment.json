@@ -1,0 +1,45 @@
+{
+  "ari_clusters_vs_rule_stages": 0.12500303986737013,
+  "clusters": [
+    {
+      "cluster": 0,
+      "n": 104,
+      "majority_stage": 1,
+      "majority_stage_name": "UI-only first app",
+      "purity": 0.413,
+      "stage_mix": {
+        "ui_first_app": 43,
+        "event_driven": 35,
+        "data_aware": 14,
+        "sensor_aware": 11,
+        "ai_component": 1
+      }
+    },
+    {
+      "cluster": 1,
+      "n": 81,
+      "majority_stage": 3,
+      "majority_stage_name": "Data-aware app",
+      "purity": 0.741,
+      "stage_mix": {
+        "data_aware": 60,
+        "sensor_aware": 14,
+        "event_driven": 4,
+        "ai_component": 3
+      }
+    },
+    {
+      "cluster": 2,
+      "n": 211,
+      "majority_stage": 3,
+      "majority_stage_name": "Data-aware app",
+      "purity": 0.398,
+      "stage_mix": {
+        "data_aware": 84,
+        "event_driven": 83,
+        "sensor_aware": 40,
+        "ai_component": 4
+      }
+    }
+  ]
+}

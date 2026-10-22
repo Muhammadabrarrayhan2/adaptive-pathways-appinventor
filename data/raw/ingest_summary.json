@@ -1,0 +1,29 @@
+{
+  "removed_by_policy": 265,
+  "gallery": {
+    "discovered": 12,
+    "downloaded": 0
+  },
+  "official": {
+    "resources": 50,
+    "downloaded": 0
+  },
+  "classroom": {
+    "consented": 0,
+    "skipped_no_consent": 0,
+    "downloaded": 0
+  },
+  "github": {
+    "repos_scanned": 448,
+    "repos_with_aia": 247,
+    "downloaded": 289
+  },
+  "corpus_size": 400,
+  "by_source": {
+    "gallery": 12,
+    "official": 14,
+    "classroom": 0,
+    "github": 374
+  },
+  "rejected": 3
+}
