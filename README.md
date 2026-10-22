@@ -1,5 +1,7 @@
 # Adaptive Pathways for App Inventor — data pipeline
 
+**Author:** Muhammad Abrar Rayhan ([@Muhammadabrarrayhan2](https://github.com/Muhammadabrarrayhan2))
+
 Reproducible data pipeline for the pilot *"Adaptive Pathways for App Inventor: An Explainable Skill-Gap and
 Next-Step Recommendation Pilot"* (M. A. Rayhan, 2026). It builds deliverables D1 (skill-gap taxonomy, draft),
 the data layer of D2 (explainable next-step prototype) and D4 (reproducibility kit) from public sources only.

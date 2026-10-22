@@ -1,6 +1,11 @@
 # Adaptive Pathways for App Inventor — data pipeline configuration.
 # Every stochastic step reads `seed` from here so runs are reproducible (proposal §3.1, D4).
 
+project:
+  author: Muhammad Abrar Rayhan
+  github: Muhammadabrarrayhan2
+  repository: https://github.com/Muhammadabrarrayhan2/adaptive-pathways-appinventor
+
 seed: 42
 user_agent: "AdaptivePathwaysResearch/0.1 (+research pilot; contact abrarrayhan8@gmail.com)"
 
