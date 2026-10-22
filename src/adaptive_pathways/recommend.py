@@ -48,6 +48,8 @@ DIFF_FIT = {1: {"beginner": 1.0, "intermediate": 0.3, "advanced": 0.0},
             3: {"beginner": 0.5, "intermediate": 1.0, "advanced": 0.7},
             4: {"beginner": 0.4, "intermediate": 1.0, "advanced": 1.0},
             5: {"beginner": 0.4, "intermediate": 0.8, "advanced": 1.0}}
+SOURCE_NAMES = {"github": "GitHub", "gallery": "the App Inventor Gallery", "official": "an official tutorial",
+                "classroom": "a consented classroom project"}
 SIZE_COLS = ["n_blocks", "n_components", "n_screens", "n_event_handlers", "n_procedures", "n_list_blocks"]
 
 
@@ -144,7 +146,7 @@ class Recommender:
             text += f" Among {n_similar} reference projects of similar size, {lift:.0%} already use {CONCEPTS[lift_flag]}."
         if peer and "pseudonym" in peer:
             text += (f" A comparable project at stage {peer['stage']}: {peer['pseudonym']} "
-                     f"({peer['n_blocks']} blocks, from {peer['source']}).")
+                     f"({peer['n_blocks']} blocks, from {SOURCE_NAMES.get(peer['source'], peer['source'])}).")
         elif peer:
             text += f" A peer example: '{peer['title']}' ({peer['public_url']})."
         return {"resource_id": r["resource_id"], "title": r["title"], "url": r["url"], "kind": r["kind"],
