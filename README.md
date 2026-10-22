@@ -71,7 +71,7 @@ This project was created by **Muhammad Abrar Rayhan** ([@Muhammadabrarrayhan2](h
 If you use the code, the derived data or the report, please cite it (GitHub's "Cite this repository" button uses
 `CITATION.cff`):
 
-> Rayhan, M. A. (2026). *Adaptive Pathways for App Inventor: data pipeline* (Version 0.1.0) [Computer software].
+> Rayhan, M. A. (2026). *Adaptive Pathways for App Inventor: data pipeline* (Version 0.1.1) [Computer software].
 > https://github.com/Muhammadabrarrayhan2/adaptive-pathways-appinventor
 
 Under the MIT License, copies and substantial portions of this code must keep the copyright notice in `LICENSE`
