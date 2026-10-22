@@ -72,7 +72,7 @@ def hist_blocks(blocks: pd.Series, path) -> None:
 def md_table(df: pd.DataFrame) -> str:
     cols = list(df.columns)
     lines = ["| " + " | ".join(map(str, cols)) + " |", "|" + "---|" * len(cols)]
-    for _, r in df.iterrows():
+    for r in df.astype(object).itertuples(index=False):  # object dtype keeps ints from becoming floats
         lines.append("| " + " | ".join(f"{v:.3f}" if isinstance(v, float) else str(v) for v in r) + " |")
     return "\n".join(lines)
 
