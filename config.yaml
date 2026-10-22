@@ -7,7 +7,7 @@ project:
   repository: https://github.com/Muhammadabrarrayhan2/adaptive-pathways-appinventor
 
 seed: 42
-user_agent: "AdaptivePathwaysResearch/0.1 (+research pilot; contact abrarrayhan8@gmail.com)"
+user_agent: "AdaptivePathwaysResearch/0.1 (+https://github.com/Muhammadabrarrayhan2/adaptive-pathways-appinventor)"
 
 paths:
   raw: data/raw
