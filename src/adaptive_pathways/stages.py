@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Stage 5 — skill-gap taxonomy v0: named stages, project placement, and cluster alignment (proposal §3.2).
 
 The proposal labels data-driven clusters *by hand*, then has two teachers review the labels. This

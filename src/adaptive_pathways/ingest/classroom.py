@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Consented classroom artifacts (proposal §3.1, §4).
 
 Drop learner .aia files into data/raw/classroom_inbox/ together with consent.csv:

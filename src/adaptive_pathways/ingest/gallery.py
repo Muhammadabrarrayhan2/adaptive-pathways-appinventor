@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """MIT App Inventor public Gallery: crawl public listings and download each project's .aia.
 
 Anonymous access exposes the featured listings (with sort variants) and per-app permalinks; the

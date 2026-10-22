@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software or its derived data, please cite it as below."
+title: "Adaptive Pathways for App Inventor: data pipeline"
+abstract: >-
+  Reproducible data pipeline for an explainable skill-gap and next-step recommendation pilot for
+  MIT App Inventor: ingestion of public and openly licensed projects, parsing with aiatools,
+  skill profiles, clustering, a draft skill-gap taxonomy, a next-step resource catalog and a data report.
+type: software
+authors:
+  - given-names: "Muhammad Abrar"
+    family-names: "Rayhan"
+    affiliation: "Telkom University Jakarta"
+repository-code: "https://github.com/Muhammadabrarrayhan2/adaptive-pathways-appinventor"
+license: MIT
+version: "0.1.0"
+date-released: "2026-10-22"
+keywords:
+  - MIT App Inventor
+  - computing education
+  - explainable recommendation
+  - learning analytics

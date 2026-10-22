@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Stage 3 — turn parsed records into one structured skill profile per project (data/processed/profiles.csv).
 
 The profile is the "small structured profile" of proposal §3.2: size, event handling, control flow,

@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Content-addressed raw store for .aia files plus a provenance manifest.
 
 Each accepted archive is written once to data/raw/aia/<sha256>.aia, so byte-identical copies found

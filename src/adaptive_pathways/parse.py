@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Stage 2 — parse every stored .aia into a structural record (data/interim/parsed.jsonl).
 
 Two passes per project:

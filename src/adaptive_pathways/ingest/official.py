@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Official MIT App Inventor materials: tutorial index, AI curriculum index, and their starter/solution .aia files.
 
 These pages define the space of "next steps" the recommender may suggest (proposal §3.1), so their

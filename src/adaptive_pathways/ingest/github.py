@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Public GitHub repositories containing App Inventor .aia projects.
 
 GitHub code search does not index binary files, so discovery is two-step: repository search over

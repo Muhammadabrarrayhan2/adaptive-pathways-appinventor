@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Explainable next-step recommender over the pipeline outputs (proposal §3.3).
 
 Given an .aia: parse -> profile -> place in a taxonomy stage -> score catalog resources -> top 3,

@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Stage 6 — next-step resource catalog (data/catalog/resources.json).
 
 Each official tutorial / AI curriculum unit becomes a candidate next step with:

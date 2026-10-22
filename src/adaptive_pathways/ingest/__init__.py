@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Stage 1 — ingestion from all configured sources into the content-addressed raw store."""
 from __future__ import annotations
 

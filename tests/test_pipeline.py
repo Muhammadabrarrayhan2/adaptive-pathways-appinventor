@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Offline tests on synthetic .aia archives (no network, no downloaded data needed)."""
 from __future__ import annotations
 

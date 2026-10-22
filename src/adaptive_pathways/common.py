@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Shared helpers: config, logging, polite HTTP, hashing, JSONL I/O and .aia safety checks."""
 from __future__ import annotations
 

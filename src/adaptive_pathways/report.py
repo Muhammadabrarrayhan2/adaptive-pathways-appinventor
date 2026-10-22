@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Stage 7 — data-quality and corpus report (reports/data_report.md + reports/figures/*.png).
 
 Feeds the "structural findings memo" checkpoint (proposal §6, weeks 3–4). Corpus statistics are set

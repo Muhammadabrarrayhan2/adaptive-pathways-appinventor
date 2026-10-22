@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Adaptive Pathways data pipeline — single entry point.
 
     python run_pipeline.py all                 # ingest -> parse -> features -> cluster -> stages -> catalog -> report

@@ -64,3 +64,15 @@ Ingestion is incremental: already-fetched URLs are skipped.
 
 Code: MIT (see `LICENSE`). Derived data under `data/` describes third-party projects that keep their own licences
 (recorded per project in `data/raw/manifest.jsonl`); raw `.aia` archives are not included in this repository.
+
+## How to cite and attribution
+
+This project was created by **Muhammad Abrar Rayhan** ([@Muhammadabrarrayhan2](https://github.com/Muhammadabrarrayhan2)).
+If you use the code, the derived data or the report, please cite it (GitHub's "Cite this repository" button uses
+`CITATION.cff`):
+
+> Rayhan, M. A. (2026). *Adaptive Pathways for App Inventor: data pipeline* (Version 0.1.0) [Computer software].
+> https://github.com/Muhammadabrarrayhan2/adaptive-pathways-appinventor
+
+Under the MIT License, copies and substantial portions of this code must keep the copyright notice in `LICENSE`
+and in each source file.

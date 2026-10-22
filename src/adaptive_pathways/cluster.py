@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Muhammad Abrar Rayhan (https://github.com/Muhammadabrarrayhan2)
+# SPDX-License-Identifier: MIT
 """Stage 4 — cluster skill profiles (proposal §3.2, step 2).
 
 Two simple, well-understood methods on the same profiles:
