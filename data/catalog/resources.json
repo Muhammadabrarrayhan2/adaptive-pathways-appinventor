@@ -40,7 +40,7 @@
       "uses_variables"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -120,7 +120,7 @@
     ],
     "requires": [],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -143,7 +143,7 @@
       "uses_events"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "solution_aia",
     "solution_project_ids": [
       "297790c2abfa7c01"
@@ -160,7 +160,7 @@
     "introduces": [],
     "requires": [],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -180,7 +180,7 @@
     ],
     "requires": [],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -195,7 +195,7 @@
     "introduces": [],
     "requires": [],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -251,7 +251,7 @@
       "uses_events"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "solution_aia",
     "solution_project_ids": [
       "53c6bdb2eb9b1124"
@@ -276,7 +276,7 @@
     ],
     "requires": [],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "solution_aia",
     "solution_project_ids": [
       "ff03acb47e8a88e5"
@@ -330,7 +330,7 @@
       "uses_events"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -351,7 +351,7 @@
       "uses_events"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -370,7 +370,7 @@
     ],
     "requires": [],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "solution_aia",
     "solution_project_ids": [
       "047f45301ea615d3"
@@ -392,7 +392,7 @@
     ],
     "requires": [],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "solution_aia",
     "solution_project_ids": [
       "b78330abfb2c7e8f"
@@ -411,7 +411,7 @@
     "introduces": [],
     "requires": [],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -432,7 +432,7 @@
       "uses_events"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -491,7 +491,7 @@
       "uses_events"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -510,7 +510,7 @@
       "uses_events"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -531,7 +531,7 @@
       "uses_events"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -587,7 +587,7 @@
       "uses_events"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "solution_aia",
     "solution_project_ids": [
       "5b99c188b6c6fca2"
@@ -610,7 +610,7 @@
       "uses_variables"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "index_metadata",
     "solution_project_ids": [],
     "grade_levels": null
@@ -1153,7 +1153,7 @@
       "uses_events"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "curated",
     "solution_project_ids": [],
     "grade_levels": null
@@ -1171,7 +1171,7 @@
     ],
     "requires": [],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "curated",
     "solution_project_ids": [],
     "grade_levels": null
@@ -1207,7 +1207,7 @@
     ],
     "requires": [],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "curated",
     "solution_project_ids": [],
     "grade_levels": null
@@ -1226,7 +1226,7 @@
       "uses_events"
     ],
     "target_stage": 2,
-    "target_stage_name": "Event-driven (multi-screen) app",
+    "target_stage_name": "Event-driven app",
     "evidence": "curated",
     "solution_project_ids": [],
     "grade_levels": null

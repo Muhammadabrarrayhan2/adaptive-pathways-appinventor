@@ -37,28 +37,28 @@
   "baseline_comparison": {
     "mean_blocks": {
       "this_corpus": 261.551,
-      "gresse_von_wangenheim": 162.5
+      "alves_et_al_2020": "162.5"
     },
-    "pct_under_15_blocks": {
-      "this_corpus": 0.144,
-      "gresse_von_wangenheim": 0.25
+    "pct_le_15_blocks": {
+      "this_corpus": 0.152,
+      "alves_et_al_2020": "\u2265 25% (first quartile = 15 blocks)"
     },
     "pct_with_events": {
       "this_corpus": 0.967,
-      "gresse_von_wangenheim": 0.9
+      "alves_et_al_2020": "91.2% (80,832 / 88,606)"
     },
     "pct_with_loops": {
       "this_corpus": 0.172,
-      "gresse_von_wangenheim": 0.06
+      "alves_et_al_2020": "6.4% (5,635 / 88,606)"
     },
-    "pct_with_button_or_label": {
-      "this_corpus": 0.96,
-      "gresse_von_wangenheim": 0.85
+    "pct_with_ui_component": {
+      "this_corpus": 0.977,
+      "alves_et_al_2020": "93%"
     }
   },
   "stage_distribution": {
     "Data-aware app": 158,
-    "Event-driven (multi-screen) app": 122,
+    "Event-driven app": 122,
     "Sensor-aware app": 65,
     "UI-only first app": 43,
     "AI-component app": 8

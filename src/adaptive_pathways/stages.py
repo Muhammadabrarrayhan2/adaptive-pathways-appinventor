@@ -30,7 +30,7 @@ STAGES: list[dict[str, Any]] = [
     {"id": 3, "key": "data_aware", "name": "Data-aware app",
      "rule": "stores or structures data: lists/dictionaries, TinyDB/File, CloudDB/Web, or charts",
      "test": lambda r: r["uses_lists"] or r["uses_dictionaries"] or r["uses_storage"] or r["uses_data_science"]},
-    {"id": 2, "key": "event_driven", "name": "Event-driven (multi-screen) app",
+    {"id": 2, "key": "event_driven", "name": "Event-driven app",
      "rule": "has event handlers plus logic (conditionals/variables), multiple screens, or 15+ blocks",
      "test": lambda r: r["uses_events"] and (r["uses_conditionals"] or r["uses_variables"] or r["uses_multiscreen"]
                                             or r["n_blocks"] >= 15)},

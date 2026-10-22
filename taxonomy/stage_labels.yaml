@@ -16,7 +16,7 @@ stages:
     or charts'
 - id: 2
   key: event_driven
-  name: Event-driven (multi-screen) app
+  name: Event-driven app
   rule: has event handlers plus logic (conditionals/variables), multiple screens,
     or 15+ blocks
 - id: 1

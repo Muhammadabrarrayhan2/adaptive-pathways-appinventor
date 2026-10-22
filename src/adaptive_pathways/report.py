@@ -21,9 +21,24 @@ from .common import read_jsonl  # noqa: E402
 from .recommend import CONCEPTS  # noqa: E402
 
 INK, MUTED, GRID, SERIES = "#0b0b0b", "#52514e", "#e4e3df", "#2a78d6"
-BASELINE = {  # Gresse von Wangenheim et al., as summarised in the proposal §1.1
-    "mean_blocks": 162.5, "pct_under_15_blocks": 0.25, "pct_with_events": 0.90, "pct_with_loops": 0.06,
-    "pct_with_button_or_label": 0.85,
+# Alves, Gresse von Wangenheim & Hauck (2020), "Teaching Programming to Novices: A Large-scale Analysis of App
+# Inventor Projects", arXiv:2006.11327: 88,606 public Gallery projects downloaded in June 2018. Values are quoted
+# from the paper; where it reports only a quartile, the value is written as a bound.
+BASELINE_REF = "https://arxiv.org/abs/2006.11327"
+BASELINE = [  # (key, label, is_percent, paper value as reported)
+    ("mean_blocks", "Mean blocks per project", False, "162.5"),
+    ("pct_le_15_blocks", "Projects with ≤ 15 blocks", True, "≥ 25% (first quartile = 15 blocks)"),
+    ("pct_with_events", "Projects with ≥ 1 event block", True, "91.2% (80,832 / 88,606)"),
+    ("pct_with_loops", "Projects with ≥ 1 loop block", True, "6.4% (5,635 / 88,606)"),
+    ("pct_with_ui_component", "Projects with a User Interface component", True, "93%"),
+]
+REJECT_REASONS = {
+    "not_zip": "not a ZIP archive (empty or placeholder files committed in place of a project)",
+    "too_large": "archive above the {limit} MB size limit",
+    "bad_zip": "corrupt ZIP archive",
+    "zip_bomb_guard": "uncompressed size above the safety limit",
+    "not_app_inventor": "ZIP without App Inventor project files (other software's `.aia`, e.g. Adobe Illustrator actions)",
+    "no_screens": "App Inventor archive without any screen",
 }
 
 
@@ -91,11 +106,9 @@ def run(cfg: dict[str, Any]) -> dict[str, Any]:
 
     at = [r["aiatools"] for r in parsed if r.get("status") == "ok"]
     at_ok = [a for a in at if a.get("ok")]
-    parsed_comp = {r["project_id"]: r["component_types"] for r in parsed if r.get("status") == "ok"}
-    has_btn_lbl = A["project_id"].map(lambda i: bool({"Button", "Label"} & set(parsed_comp.get(i, {})))).mean()
-    ours = {"mean_blocks": A["n_blocks"].mean(), "pct_under_15_blocks": (A["n_blocks"] < 15).mean(),
+    ours = {"mean_blocks": A["n_blocks"].mean(), "pct_le_15_blocks": (A["n_blocks"] <= 15).mean(),
             "pct_with_events": A["uses_events"].mean(), "pct_with_loops": A["uses_loops"].mean(),
-            "pct_with_button_or_label": has_btn_lbl}
+            "pct_with_ui_component": (A["n_ui"] > 0).mean()}
     summary = {
         "corpus_total": len(prof), "in_analysis": len(A),
         "by_source_total": prof["source"].value_counts().to_dict(),
@@ -108,8 +121,8 @@ def run(cfg: dict[str, Any]) -> dict[str, Any]:
         "aiatools_component_agreement": sum(a["components_agree"] for a in at_ok) / max(len(at_ok), 1),
         "legacy_format_projects": sum(1 for r in parsed if r.get("n_legacy_blocks_normalised", 0) > 0),
         "licenses": prof["license"].fillna("unknown").value_counts().head(10).to_dict(),
-        "baseline_comparison": {k: {"this_corpus": round(float(ours[k]), 3), "gresse_von_wangenheim": v}
-                                for k, v in BASELINE.items()},
+        "baseline_comparison": {k: {"this_corpus": round(float(ours[k]), 3), "alves_et_al_2020": v}
+                                for k, _, _, v in BASELINE},
         "stage_distribution": A["stage_name"].value_counts().to_dict(),
         "clustering": {k: sel[k] for k in ("chosen_k", "primary_method", "fallback_used", "chosen", "rule", "n_projects")},
         "ari_clusters_vs_rule_stages": align["ari_clusters_vs_rule_stages"],
@@ -124,14 +137,21 @@ def run(cfg: dict[str, Any]) -> dict[str, Any]:
     hbar(stage_counts / stage_counts.sum(), "Draft stage placement (taxonomy v0)", fig_dir / "stage_distribution.png")
 
     cand = pd.DataFrame(sel["candidates"])
-    base_df = pd.DataFrame([{"metric": k, "this corpus": round(float(ours[k]), 3), "Gresse von Wangenheim et al.": v}
-                            for k, v in BASELINE.items()])
+    fmt = lambda v, pct: f"{v:.1%}" if pct else f"{v:.1f}"  # noqa: E731
+    base_df = pd.DataFrame([{"metric": label, f"this corpus (n={len(A)})": fmt(ours[k], pct),
+                             "Alves, Gresse von Wangenheim & Hauck (2020)": v} for k, label, pct, v in BASELINE])
+    limit_mb = cfg["limits"]["max_aia_bytes"] // 1_000_000
+    reject_lines = "\n".join(f"  * `{reason}` ({n}): {REJECT_REASONS.get(reason, reason).format(limit=limit_mb)}"
+                              for reason, n in sorted(summary["rejected_downloads"].items())) or "  * none"
+    kinds = Counter(r["kind"] for r in catalog)
+    cat_df = pd.DataFrame([{"target stage": st, "resources": n} for st, n in
+                           Counter(r["target_stage_name"] for r in catalog).most_common()])
     align_df = pd.DataFrame([{k: (json.dumps(v) if isinstance(v, dict) else v) for k, v in a.items()}
                              for a in align["clusters"]])
     src_df = pd.DataFrame({"total": prof["source"].value_counts(), "in_analysis": A["source"].value_counts()}).fillna(0).astype(int)
     src_df.insert(0, "source", src_df.index)
 
-    md = f"""# Adaptive Pathways — data report
+    md = f"""# Adaptive Pathways: data report
 
 **Author:** {cfg['project']['author']} · GitHub [@{cfg['project']['github']}](https://github.com/{cfg['project']['github']})  
 **Repository:** {cfg['project']['repository']}
@@ -144,8 +164,8 @@ _Generated by `python run_pipeline.py report`. All numbers below are recomputed 
 
 * Projects stored: **{len(prof)}**; used in analysis: **{len(A)}**
   (excluded: {summary['near_duplicates']} structural near-duplicates, {summary['empty']} empty, {summary['parse_errors']} parse errors).
-* Downloads rejected before storage: `{summary['rejected_downloads']}`
-  (`not_app_inventor` = other software's `.aia` files, e.g. Adobe Illustrator actions).
+* Downloads rejected before storage ({len(rejects)}):
+{reject_lines}
 * Licences (top): `{summary['licenses']}`
 
 ## 2. Parser quality
@@ -154,19 +174,38 @@ _Generated by `python run_pipeline.py report`. All numbers below are recomputed 
 * Agreement between aiatools and the direct reader: blocks **{summary['aiatools_block_agreement']:.1%}**,
   components **{summary['aiatools_component_agreement']:.1%}**.
 * {summary['legacy_format_projects']} projects use the pre-2013 block format (`Button1_Click`); they are normalised to the modern vocabulary.
-* Known aiatools issue handled: project-level `AIAFile.blocks()` returns only one screen's blocks in multi-screen
-  projects; the pipeline aggregates `screen.blocks()` per screen instead.
+* Known aiatools issue handled: project-level `AIAFile.blocks()` drops blocks in multi-screen projects when block ids
+  repeat across screens; the pipeline aggregates `screen.blocks()` per screen instead. Reported upstream as
+  [mit-cml/aiatools#13](https://github.com/mit-cml/aiatools/issues/13), with a proposed fix in
+  [mit-cml/aiatools#14](https://github.com/mit-cml/aiatools/pull/14).
 
 ## 3. Comparison with the published Gallery baseline
 
 {md_table(base_df)}
 
-Differences are expected: this corpus over-samples curated sources (official tutorials, featured Gallery apps,
-GitHub repositories), so it skews larger and more structured than the full Gallery.
+Baseline: Alves, N. d. C., Gresse von Wangenheim, C., & Hauck, J. C. R. (2020). *Teaching Programming to Novices:
+A Large-scale Analysis of App Inventor Projects.* [arXiv:2006.11327]({BASELINE_REF}).
 
 ![block distribution](figures/block_distribution.png)
 
 ![concept prevalence](figures/concept_prevalence.png)
+
+**Differences in definitions.** The two columns are not measured identically, so compare them as orders of magnitude:
+
+* *Population.* The paper analyses 88,606 public Gallery projects downloaded in June 2018 with support from the MIT
+  App Inventor team; this corpus has {len(A)} projects from official tutorials, featured Gallery apps and openly
+  licensed GitHub repositories, collected in 2026.
+* *Counting method.* The paper counts token frequencies after a lexical analysis of each `.aia`; this pipeline parses
+  the block trees of every screen (aiatools plus a direct XML reader) and normalises pre-2013 block formats.
+* *Small projects.* The paper reports only that the first quartile is 15 blocks ("25% of the projects have up to only
+  15 programming blocks"), which means at least 25% have ≤ 15 blocks; the baseline is therefore a lower bound.
+* *Loops.* The paper counts loop blocks; this pipeline also counts dictionary-walk loops (`controls_for_each_dict`).
+* *User Interface.* The paper reports the share of projects with a User Interface palette component (93%); there is
+  no Button- or Label-specific figure in the paper, so this corpus is measured with the same palette category.
+
+Differences are expected: this corpus over-samples curated sources (official tutorials, featured Gallery apps,
+GitHub repositories), so it skews larger and more structured than the full Gallery.
+
 
 ## 4. Clustering (RQ1)
 
@@ -189,12 +228,20 @@ ARI between the primary clusters and rule-based draft stages: **{align['ari_clus
 
 ## 6. Next-step catalog
 
-{len(catalog)} resources ({sum(r['evidence'] == 'solution_aia' for r in catalog)} with concepts measured from their own solution `.aia`).
+The catalog holds **{len(catalog)} next-step resources**: {kinds.get('tutorial', 0)} official tutorials,
+{kinds.get('ai_curriculum', 0)} AI curriculum units and {kinds.get('concept_reference', 0)} block-reference pages.
+For {sum(r['evidence'] == 'solution_aia' for r in catalog)} of them, the concepts they introduce are measured from
+the resource's own solution project; the rest use the index metadata.
+
+{md_table(cat_df)}
 
 ## 7. Limitations
 
 * Gallery listings are only partly reachable without login (featured apps); Gallery projects are collected
   only through public listings. GitHub repositories (open licences only) over-represent classroom and tutorial work.
+* Because classroom and tutorial projects are typically finished, guided work, this over-representation is the
+  likely reason the corpus is larger and more structured than the Gallery baseline in section 3
+  (mean {ours['mean_blocks']:.0f} vs 162.5 blocks; {ours['pct_le_15_blocks']:.0%} vs at least 25% with ≤ 15 blocks).
 * Stage labels are a rule-based draft (taxonomy v0) awaiting the two-teacher review in `taxonomy/stage_labels.yaml`.
 * No telemetry, no learner outcomes: everything here is structural and descriptive.
 """
