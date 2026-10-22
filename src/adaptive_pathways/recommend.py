@@ -9,6 +9,7 @@ text, so every sentence can be traced to a number in the response's `signals`).
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any, Callable
 
@@ -43,6 +44,51 @@ CONCEPTS = {  # flag -> label, in rough pedagogical order (earlier = more founda
     "uses_generic": "'any component' blocks",
 }
 ORDER = {f: i for i, f in enumerate(CONCEPTS)}
+
+# AI techniques. The concept flags only say whether a project uses *some* AI, so for a project that already does,
+# every AI curriculum unit looked like "nothing new" and the recommender fell back to resources from lower stages
+# (v0.1: 100% of first suggestions for stage-5 projects went backwards). Since v0.2 a technique the project has not
+# used yet counts as a new concept, following the App Inventor AI curriculum's progression across techniques.
+# key -> (label, pattern on a resource's title + URL, pattern on a project's component type names)
+AI_TECHNIQUES = {
+    "ai:classification": ("image or sound classification", r"classif|picaboo|look-extension|rock-paper|teachable",
+                          r"classifier|teachable|ml4k"),
+    "ai:pose_face": ("pose and face tracking", r"facemesh|aidance|dancing|posenet", r"facemesh|posenet|handpose"),
+    "ai:generative_text": ("generative text and chatbots", r"chatgpt|storygpt|therapist|advisor|\bgpt",
+                           r"chatbot|openai|gpt|gemini|llm"),
+    "ai:generative_image": ("generative images and vision", r"imagebot|doodle|vision ?aid", r"imagebot"),
+    "ai:voice_assistant": ("voice assistants (Alexa)", r"alexa", r"alexa"),
+    "ai:reinforcement": ("reinforcement learning", r"reinforcement|tame-?the-?dog", r"reinforcement"),
+    "ai:augmented_reality": ("augmented reality", r"augmented|ar-chicken", r"augmented|arcore"),
+}
+
+# Stage fit by step (resource target stage minus project stage). Moving forward one stage is best; going backwards
+# is penalised more the further back it goes (v0.1 scored every backward step 0.3).
+STAGE_FIT = {1: 1.0, 0: 0.6, 2: 0.5, -1: 0.3, -2: 0.15}
+
+
+def stage_fit(step: int) -> float:
+    return STAGE_FIT.get(step, 0.1 if step > 2 else 0.05)
+
+
+def concept_label(key: str) -> str:
+    if key in CONCEPTS:
+        return CONCEPTS[key]
+    return f"a new kind of AI ({AI_TECHNIQUES[key][0]})"
+
+
+def concept_order(key: str) -> float:
+    return ORDER.get(key, ORDER["uses_ai"] + 0.5)  # AI techniques sit just after "an AI component"
+
+
+def resource_techniques(r: dict[str, Any]) -> set[str]:
+    text = f"{r['title']} {r['url']}".lower()
+    return {k for k, (_, pat, _) in AI_TECHNIQUES.items() if re.search(pat, text)}
+
+
+def project_techniques(component_types: list[str]) -> set[str]:
+    text = " ".join(component_types).lower()
+    return {k for k, (_, _, pat) in AI_TECHNIQUES.items() if re.search(pat, text)}
 DIFF_FIT = {1: {"beginner": 1.0, "intermediate": 0.3, "advanced": 0.0},
             2: {"beginner": 0.8, "intermediate": 1.0, "advanced": 0.3},
             3: {"beginner": 0.5, "intermediate": 1.0, "advanced": 0.7},
@@ -53,7 +99,7 @@ SOURCE_NAMES = {"github": "GitHub", "gallery": "the App Inventor Gallery", "offi
 # Ranking weights. Each component is in [0, 1]; the score is their weighted sum. Exposed so the rationale for a
 # ranking can be shown and audited (proposal §1.2).
 SCORE_WEIGHTS = {
-    "stage_fit": 2.0,        # resource leads to the next stage (1.0), the same stage (0.6), two stages on (0.5)
+    "stage_fit": 2.0,        # next stage 1.0, same 0.6, two on 0.5; backwards 0.3 / 0.15 / 0.05 (see STAGE_FIT)
     "friction": 1.0,         # few new concepts at once: 1 -> 1.0, 2 -> 0.7, 3 -> 0.4, more -> 0.2
     "peer_adoption": 1.5,    # share of size-matched corpus projects that already use the new concept
     "foundational": 0.8,     # earlier concepts in the pedagogical order score higher
@@ -102,22 +148,26 @@ class Recommender:
         gaps = sorted(set(CONCEPTS) - used, key=ORDER.get)
         similar = self._similar(p)
         peer_rate = {f: float(similar[f].astype(bool).mean()) if len(similar) else 0.0 for f in CONCEPTS}
+        peer_rate.update({k: peer_rate["uses_ai"] for k in AI_TECHNIQUES})
+        known_ai = project_techniques(p.get("_component_types", [])) if "uses_ai" in used else set()
         scored = []
         for r in self.resources:
-            new = sorted(set(r["introduces"]) & set(gaps), key=ORDER.get)
+            new = set(r["introduces"]) & set(gaps)
+            if "uses_ai" in used:
+                new |= resource_techniques(r) - known_ai  # deepen AI with a technique the learner has not used
+            new = sorted(new, key=concept_order)
             if not new or set(r["requires"]) - used:
                 continue  # nothing new to learn, or prerequisites the learner has not shown yet
             step = r["target_stage"] - stage
-            stage_fit = {0: 0.6, 1: 1.0, 2: 0.5}.get(step, 0.1 if step > 2 else 0.3)
             friction = {1: 1.0, 2: 0.7, 3: 0.4}.get(len(new), 0.2)
             lift_flag = max(new, key=peer_rate.get)  # the new concept most common among size-matched peers
             lift = peer_rate[lift_flag]
             familiar = sorted(set(r["components"]) & set(p["_component_types"]))
             parts = {
-                "stage_fit": stage_fit,
+                "stage_fit": stage_fit(step),
                 "friction": friction,
                 "peer_adoption": lift,
-                "foundational": 1.0 - ORDER[new[0]] / len(ORDER),
+                "foundational": 1.0 - concept_order(new[0]) / len(ORDER),
                 "familiarity": min(len(familiar), 2) / 2,
                 "difficulty_fit": DIFF_FIT[stage].get(r["difficulty"], 0.5),
                 "evidence": float(r["evidence"] == "solution_aia"),
@@ -131,7 +181,7 @@ class Recommender:
             if new[0] in seen_primary:
                 continue  # diversity: each suggestion opens a different first new concept
             seen_primary.add(new[0])
-            peer = self._peer(p, min(stage + 1, 5), new[0], peers_used)
+            peer = self._peer(p, min(stage + 1, 5), new[0] if new[0] in CONCEPTS else "uses_ai", peers_used)
             if peer:
                 peers_used.add(peer["project_id"])
             pick = self._explain(p, stage, used, gaps, r, new, familiar, lift, lift_flag, score, peer, len(similar))
@@ -147,7 +197,7 @@ class Recommender:
 
     def _explain(self, p, stage, used, gaps, r, new, familiar, lift, lift_flag, score, peer, n_similar) -> dict[str, Any]:
         def lbl(fs: list[str], cap: int = 3) -> str:
-            names = [CONCEPTS[f] for f in fs]
+            names = [concept_label(f) for f in fs]
             if not names:
                 return "no additional concepts"
             return ", ".join(names[:cap]) + (f" and {len(names) - cap} more" if len(names) > cap else "")
@@ -162,14 +212,15 @@ class Recommender:
                 f"It does not yet use {lbl(gaps[:3])}. '{r['title']}' is suggested as {size} step because it "
                 f"{builds_on} and introduces {lbl(new)}.")
         if n_similar >= 5:
-            text += f" Among {n_similar} reference projects of similar size, {lift:.0%} already use {CONCEPTS[lift_flag]}."
+            text += f" Among {n_similar} reference projects of similar size, {lift:.0%} already use {concept_label(lift_flag) if lift_flag in CONCEPTS else CONCEPTS['uses_ai']}."
         if peer and "pseudonym" in peer:
             text += (f" A comparable project at stage {peer['stage']}: {peer['pseudonym']} "
                      f"({peer['n_blocks']} blocks, from {SOURCE_NAMES.get(peer['source'], peer['source'])}).")
         elif peer:
             text += f" A peer example: '{peer['title']}' ({peer['public_url']})."
         return {"resource_id": r["resource_id"], "title": r["title"], "url": r["url"], "kind": r["kind"],
-                "difficulty": r["difficulty"], "introduces": new, "target_stage": r["target_stage"],
+                "difficulty": r["difficulty"], "introduces": new, "introduces_labels": [concept_label(f) for f in new],
+                "target_stage": r["target_stage"],
                 "score": round(float(score), 3), "peer_adoption": round(float(lift), 3), "peer_example": peer,
                 "rationale": text}
 

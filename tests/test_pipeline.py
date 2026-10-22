@@ -171,3 +171,27 @@ def test_score_parts_explain_the_score(tmp_path):
         assert set(r["score_parts"]) == set(SCORE_WEIGHTS)
         assert abs(sum(v["points"] for v in r["score_parts"].values()) - r["score"]) < 0.01
         assert all(0.0 <= v["value"] <= 1.0 for v in r["score_parts"].values())
+
+
+def test_ai_techniques_and_backward_penalty():
+    from adaptive_pathways.recommend import project_techniques, resource_techniques, stage_fit
+
+    assert resource_techniques({"title": "Facemesh Filter Camera", "url": "https://x/facemesh"}) == {"ai:pose_face"}
+    assert resource_techniques({"title": "Personal Image Classifier: PICaboo", "url": "https://x/picaboo"}) == {"ai:classification"}
+    assert resource_techniques({"title": "QuizMe", "url": "https://x/quizme"}) == set()
+    assert project_techniques(["Button", "PersonalImageClassifier"]) == {"ai:classification"}
+    assert project_techniques(["ChatBot", "ImageBot"]) == {"ai:generative_text", "ai:generative_image"}
+    assert stage_fit(1) > stage_fit(0) > stage_fit(-1) > stage_fit(-2) > stage_fit(-3)  # further back scores lower
+
+
+@pytest.mark.skipif(not (Path(__file__).resolve().parents[1] / "data/catalog/resources.json").exists(),
+                    reason="needs a pipeline run")
+def test_ai_project_can_be_offered_a_new_ai_technique(tmp_path):
+    from adaptive_pathways.common import load_config
+    from adaptive_pathways.recommend import Recommender, profile_file
+
+    p = make_aia(tmp_path, {"Screen1": ([("Btn", "Button"), ("PIC1", "PersonalImageClassifier")], EVENT_WITH_LIST)})
+    res = Recommender(load_config()).recommend(profile_file(p), k=10)
+    introduced = {k for r in res["recommendations"] for k in r["introduces"]}
+    assert any(k.startswith("ai:") and k != "ai:classification" for k in introduced)  # deepen with a new technique
+    assert all(r["introduces_labels"] for r in res["recommendations"])
